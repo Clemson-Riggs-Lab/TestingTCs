@@ -18,53 +18,64 @@ public class CsvWriter
                                 Environment.GetFolderPath(Environment.SpecialFolder.Desktop), 
                                 "TimeOfCuePresenting" + DateTime.Now.ToString("MM-dd-yy-H-mm")+ ".csv"
                                );
-
-
+        Console.WriteLine(filepath);
     } 
 
     void SetUp()
     {
-        // Creating First row of titles manually..
-        string[] rowDataTemp = new string[17];
-        rowDataTemp[0] = "Time of cue start";
-        rowDataTemp[1] = "Time of cue end";
-        rowDataTemp[2] = "New Screen Number";
-        rowDataTemp[3] = "Cue Number For Input";
+        // Creating First row of titles manually
+        string[] rowDataTemp = new string[23];
+        rowDataTemp[0] = "Trial";
+        rowDataTemp[1] = "Time of cue start";
+        rowDataTemp[2] = "Time of cue end";
+        rowDataTemp[3] = "Score";
         rowDataTemp[4] = "Type Of Change";
-        rowDataTemp[5] = "Starting Gain";
-        rowDataTemp[6] = "Starting Frequency";
-        rowDataTemp[7] = "Ending Gain";
-        rowDataTemp[8] = "Ending Frequency";
-        rowDataTemp[9] = "Starting Tactor Location";
-        rowDataTemp[10] = "Ending Tactor Location";
-        rowDataTemp[11] = "Starting ISI";
-        rowDataTemp[12] = "Ending ISI";
-        rowDataTemp[13] = "Starting Pulse Duration";
-        rowDataTemp[14] = "Ending Pulse Duration";
-        rowDataTemp[15] = "Start Change After Pulse Number";
-        rowDataTemp[16] = "End Change After Pulse Number";
+        rowDataTemp[5] = "Cue Number For Input";
+        rowDataTemp[6] = "Starting Gain";
+        rowDataTemp[7] = "Starting Frequency";
+        rowDataTemp[8] = "Ending Gain";
+        rowDataTemp[9] = "Ending Frequency";
+        rowDataTemp[10] = "Starting Tactor Location";
+        rowDataTemp[11] = "Middle Tactor Location";
+        rowDataTemp[12] = "Ending Tactor Location";
+        rowDataTemp[13] = "Starting ISI";
+        rowDataTemp[14] = "Ending ISI";
+        rowDataTemp[15] = "Starting Pulse Duration";
+        rowDataTemp[16] = "Ending Pulse Duration";
+        rowDataTemp[17] = "Start Change After Pulse Number";
+        rowDataTemp[18] = "End Change After Pulse Number";
+        rowDataTemp[19] = "Delay Within Before Change";
+        rowDataTemp[20] = "Delay Between Before Change";
+        rowDataTemp[21] = "Delay Within After Change";
+        rowDataTemp[22] = "Delay Between After Change";
         rowData.Add(rowDataTemp);
     }
-    public void AddEvent(string StartTime, string EndTime, Cue CurrentCue)
+    public void AddEvent(int Trial, string Score, string StartTime, string EndTime, Cue CurrentCue)
     {
-        string[] rowDataTemp = new string[17];
-        rowDataTemp[0] = StartTime;
-        rowDataTemp[1] = EndTime;
-        rowDataTemp[2] =  CurrentCue.NewScreenNumber.ToString();
-        rowDataTemp[3] =  CurrentCue.CueNumberForInput.ToString();
-        rowDataTemp[4] =  CurrentCue.TypeoOfChange;
-        rowDataTemp[5] =  CurrentCue.StartingGain.ToString();
-        rowDataTemp[6] =  CurrentCue.StartingFrequency.ToString(); 
-        rowDataTemp[7] =  CurrentCue.EndingGain.ToString();      
-        rowDataTemp[8] =  CurrentCue.EndingFrequency.ToString();
-        rowDataTemp[9] =  CurrentCue.StartingTactorLocation.ToString();
-        rowDataTemp[10] = CurrentCue.EndingTactorLocation.ToString();
-        rowDataTemp[11] = CurrentCue.StartingISI.ToString();
-        rowDataTemp[12] = CurrentCue.EndingISI.ToString();
-        rowDataTemp[13] = CurrentCue.StartingPulseDuration.ToString();
-        rowDataTemp[14] = CurrentCue.EndingPulseDuration.ToString();
-        rowDataTemp[15] = CurrentCue.StartChangeAfterPulseNumber.ToString();
-        rowDataTemp[16] = CurrentCue.EndChangeAfterPulseNumber.ToString();
+        string[] rowDataTemp = new string[23];
+        rowDataTemp[0] = Trial.ToString();
+        rowDataTemp[1] = StartTime.ToString();
+        rowDataTemp[2] = EndTime.ToString();
+        rowDataTemp[3] = Score.ToString();
+        rowDataTemp[4] = CurrentCue.TypeoOfChange;
+        rowDataTemp[5] = CurrentCue.CueNumberForInput.ToString();
+        rowDataTemp[6] = CurrentCue.StartingGain.ToString();
+        rowDataTemp[7] = CurrentCue.StartingFrequency.ToString();
+        rowDataTemp[8] = CurrentCue.EndingGain.ToString();
+        rowDataTemp[9] = CurrentCue.EndingFrequency.ToString();
+        rowDataTemp[10] = CurrentCue.StartingTactorLocation.ToString();
+        rowDataTemp[11] = CurrentCue.MiddleTactorLocation.ToString();
+        rowDataTemp[12] = CurrentCue.EndingTactorLocation.ToString();
+        rowDataTemp[13] = CurrentCue.StartingISI.ToString();
+        rowDataTemp[14] = CurrentCue.EndingISI.ToString();
+        rowDataTemp[15] = CurrentCue.StartingPulseDuration.ToString();
+        rowDataTemp[16] = CurrentCue.EndingPulseDuration.ToString();
+        rowDataTemp[17] = CurrentCue.StartChangeAfterPulseNumber.ToString();
+        rowDataTemp[18] = CurrentCue.EndChangeAfterPulseNumber.ToString();
+        rowDataTemp[19] = CurrentCue.DelayWithin1.ToString();
+        rowDataTemp[20] = CurrentCue.DelayBetween1.ToString();
+        rowDataTemp[21] = CurrentCue.DelayWithin2.ToString();
+        rowDataTemp[22] = CurrentCue.DelayBetween2.ToString();
         rowData.Add(rowDataTemp);
         Save();
     }

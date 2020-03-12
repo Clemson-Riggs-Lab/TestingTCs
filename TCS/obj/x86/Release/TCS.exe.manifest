@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TCS.exe" size="1480192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TCS.exe" size="1476608">
       <assemblyIdentity name="TCS" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ByXVak9o6N4pdGgNLkRomqfW40E=</dsig:DigestValue>
+        <dsig:DigestValue>ZpkuSxG407zxNh6IBZHAIOYEPmw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -144,13 +144,13 @@
       <dsig:DigestValue>xDvOKBzbCMSzbXwVsoF8kBt1qe4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TActionInterface.h" size="6205">
+  <file name="TActionInterface.h" size="6352">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>BL1OqAmbJfcvEj+4ovu2aHs/7ZA=</dsig:DigestValue>
+      <dsig:DigestValue>VajRumt9AMBAvCpTTO30dvh9Dgk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="TActionManager.dll" size="558080">
@@ -171,13 +171,13 @@
       <dsig:DigestValue>tMQV0jb5jyfe5QXBhT78kD8NKnw=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TCS.exe.config" size="114">
+  <file name="TCS.exe.config" size="117">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>WTVoTKFnsjzif7ummDQEqVtPnOo=</dsig:DigestValue>
+      <dsig:DigestValue>a3Forh+i+nzyaONrpGeK7Sudu10=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
